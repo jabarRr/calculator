@@ -1,25 +1,27 @@
 :root{
   --background: #f6f6f6;
-  --font: #222;
   --border: #333;
-  --screen: #eee;
   --calculator: #aaa;
   --btn: #eee;
-  --btn-hover: #ddd;
-  --btn-active: #ccc;
   --btn-red: #faa;
-  --btn-red-hover: #e99;
-  --btn-red-active: #d88;
   --btn-blue: #aaf;
-  --btn-blue-hover: #99e;
-  --btn-blue-active: #88d;
 }
 
+.clearBtn{
+  background-color: var(--btn-red);
+  border-color: var(--border);
+  border: solid;
+}
+.deleteBtn{
+  background-color: var(--btn-blue);
+  border-color: var(--border);
+  border: solid;
+}
 
 .calcBody{
   background-color: var(--calculator);
   border-color: var(--border);
-  border-width: medium;
+  border: solid;
   display: flex;
   flex-direction: column;
   height: 800px;
@@ -28,7 +30,6 @@
   margin-top: 100px;
   border-radius: 25px;
 }
-
 .calcDisplay{
   border-radius: 15px;
   display: flex;
@@ -37,7 +38,6 @@
   margin: 10px;
   margin-bottom: 1px;
 }
-
 .equationDiv{
   flex: 1;
   padding: 10px;
@@ -61,7 +61,6 @@
 .calcFunctions button{
   flex: 1;
 }
-
 .restOfBtns{
   display: flex;
   flex-direction: column;
@@ -95,16 +94,15 @@
 
 .restOfBtns button{
   flex: 1;
+  background-color: var(--btn);
+  border-color: var(--border);
+  border: solid;
 
 }
 
 body{
   background-color: var(--background);
 }
-
-
-
-
 .btnSection{
   border-radius: 25px;
   display: flex;
