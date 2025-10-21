@@ -1,5 +1,25 @@
+:root{
+  --background: #f6f6f6;
+  --font: #222;
+  --border: #333;
+  --screen: #eee;
+  --calculator: #aaa;
+  --btn: #eee;
+  --btn-hover: #ddd;
+  --btn-active: #ccc;
+  --btn-red: #faa;
+  --btn-red-hover: #e99;
+  --btn-red-active: #d88;
+  --btn-blue: #aaf;
+  --btn-blue-hover: #99e;
+  --btn-blue-active: #88d;
+}
+
+
 .calcBody{
-  background-color: brown;
+  background-color: var(--calculator);
+  border-color: var(--border);
+  border-width: medium;
   display: flex;
   flex-direction: column;
   height: 800px;
@@ -10,10 +30,12 @@
 }
 
 .calcDisplay{
+  border-radius: 15px;
   display: flex;
   background-color: grey;
   flex: 1;
   margin: 10px;
+  margin-bottom: 1px;
 }
 
 .equationDiv{
@@ -33,6 +55,8 @@
 .calcFunctions{
   display: flex;
   flex: 1;
+  padding: 5px;
+  gap: 5px;
 }
 .calcFunctions button{
   flex: 1;
@@ -47,18 +71,26 @@
 .firstRow{
   display: flex;
   flex: 1;
+  padding: 5px;
+  gap: 5px;
 }
 .secondRow{
   display: flex;
   flex: 1;
+  padding: 5px;
+  gap: 5px;
 }
 .thirdRow{
   display: flex;
   flex: 1;
+  padding: 5px;
+  gap: 5px;
 }
 .fourthRow{
   display: flex;
   flex: 1;
+  padding: 5px;
+  gap: 5px;
 }
 
 .restOfBtns button{
@@ -66,14 +98,23 @@
 
 }
 
+body{
+  background-color: var(--background);
+}
 
 
 
 
 .btnSection{
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
-  background-color: blue;
   flex: 4;
   margin: 10px;
 }
+
+.btnSection button{
+  border-radius: 25px;
+
+}
+

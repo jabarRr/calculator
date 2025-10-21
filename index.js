@@ -14,6 +14,8 @@ function divide (numA,numB){
 
 
 function operate(operator, numA, numB){
+  numA = Number(numA);
+  numB = Number(numB);
   if (operator == "+"){
     return add(numA,numB);
   }
@@ -62,13 +64,21 @@ deleteBtn.addEventListener("click", function (e) {
 
 equalsBtn.addEventListener("click", function(e){
   e.preventDefault();
+
   console.log(`ON EQULS FIRST NUM == ${firstNum}`);
   console.log(`ON EQULS CURRENT NUM == ${currentNum}`);
   console.log(`ON EQULS OPERATER USED == ${operaterUsed}`)
   result = operate(operaterUsed, firstNum, currentNum);
+  console.log(`ON EQULS RESULTS USED == ${result}`)
+  if (operaterUsed === "/" && currentNum == 0){
+    result = "STOP RIGHT THERE DON'T DIVIDE BY 0";
+  }
+  else if (!Number.isInteger(result)){
+    result = result.toFixed(2);
+  }
   resultDiv.textContent = result;
+  result = "Completed";
 
-  //firstNum = Number(resultDiv.textContent);
 });
 
 deleteBtn.addEventListener("click", function (e) {
@@ -83,9 +93,17 @@ deleteBtn.addEventListener("click", function (e) {
 totalNums.forEach( (selectedNum) =>{
   selectedNum.addEventListener("click", function (e) {
     e.preventDefault();
+    if (result == "Completed"){
+      resultDiv.innerHTML = "";
+      equationDiv.innerHTML = "";
+      firstNum = "";
+      currentNum = "";
+      result = "";
+      operaterUsed = "";
+    }
     console.log(currentNum);
     currentNum += selectedNum.textContent;
-    equationDiv.textContent = currentNum;
+    equationDiv.textContent = firstNum + operaterUsed + currentNum;
 
 
 
@@ -109,8 +127,8 @@ allOperators.forEach((operator) => {
       console.log("UPON START OF EVAL RESULTS IS: " + result);
       firstNum = result;
       currentNum = "";
-      equationDiv.textContent = result;
-      resultDiv.textContent = result;
+      equationDiv.textContent = result + operaterUsed;
+      resultDiv.textContent = "";
 
 
     }
