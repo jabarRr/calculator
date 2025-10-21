@@ -10,11 +10,69 @@
 }
 
 .calcDisplay{
+  display: flex;
   background-color: grey;
   flex: 1;
   margin: 10px;
 }
+
+.equationDiv{
+  flex: 1;
+  padding: 10px;
+  font-size: xx-large;
+}
+.resultDiv{
+  flex: 1;
+  align-self: flex-end;
+  padding-left: auto;
+  font-size: xx-large;
+  text-align: right;
+  padding: 10px;
+}
+
+.calcFunctions{
+  display: flex;
+  flex: 1;
+}
+.calcFunctions button{
+  flex: 1;
+}
+
+.restOfBtns{
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+  flex-wrap: wrap;
+}
+.firstRow{
+  display: flex;
+  flex: 1;
+}
+.secondRow{
+  display: flex;
+  flex: 1;
+}
+.thirdRow{
+  display: flex;
+  flex: 1;
+}
+.fourthRow{
+  display: flex;
+  flex: 1;
+}
+
+.restOfBtns button{
+  flex: 1;
+
+}
+
+
+
+
+
 .btnSection{
+  display: flex;
+  flex-direction: column;
   background-color: blue;
   flex: 4;
   margin: 10px;
