@@ -1,0 +1,21 @@
+.calcBody{
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 500px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 25px;
+}
+
+.calcDisplay{
+  background-color: grey;
+  flex: 1;
+  margin: 10px;
+}
+.btnSection{
+  background-color: blue;
+  flex: 4;
+  margin: 10px;
+}
